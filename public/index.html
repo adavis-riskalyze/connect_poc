@@ -21,7 +21,22 @@
                 },
                 onAdd: function(err, event) {
                     if (!err) {
-                        console.log('Connection', event.connection.id, 'added!');
+                        console.log('Connection', event.connection, 'added!');
+                    }
+                },
+                onDelete: function(err, event) {
+                    if(!err) {
+                        console.log('Connection', event.connection, 'deleted!');
+                    }
+                },
+                onSync: function(err, event) {
+                    if(!err) {
+                        console.log('Connection', event.connection, 'synced!');
+                    }
+                },
+                onAuthenticate: function(err, event) {
+                    if(!err) {
+                        console.log('Connection', event.connection, 'authenticated!');
                     }
                 },
                 syncType: 'auth',
